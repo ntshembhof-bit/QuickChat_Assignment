@@ -22,7 +22,22 @@ public class QuickChat {
 
             if (menuChoice.equals("1")) {
 
-                System.out.println("Send Messages selected.");
+                Message msg = new Message(1);
+
+                System.out.print(
+                        "Enter Recipient Cell Number: ");
+
+                String cell = input.nextLine();
+
+                System.out.println(
+                        msg.checkRecipientCell(cell));
+
+                System.out.print("Enter Message: ");
+
+                String text = input.nextLine();
+
+                System.out.println(
+                        msg.checkMessageLength(text));
 
             } else if (menuChoice.equals("2")) {
 
@@ -38,7 +53,7 @@ public class QuickChat {
             }
         }
 
-        System.out.println("Thank you for using QuickChat!");
+        System.out.println(
+                "Thank you for using QuickChat!");
     }
-}   
-
+}
